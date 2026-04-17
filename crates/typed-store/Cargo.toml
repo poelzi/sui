@@ -41,8 +41,10 @@ mysten-metrics.workspace = true
 [target.'cfg(not(windows))'.dependencies]
 tidehunter = {git = "https://github.com/mystenlabs/tidehunter.git", rev = "bf7e85261d348d6552fe088635e551e6f523d7df", version = "0.1.0", optional = true}
 
-[target.'cfg(not(target_env = "msvc"))'.dependencies]
-rocksdb = { version = "0.22.0", default-features = false, features = ["jemalloc"] }
+# [target.'cfg(not(target_env = "msvc"))'.dependencies]
+# jemalloc feature removed — fails to build on NixOS with debug profile
+# (_FORTIFY_SOURCE requires -O). Hiveworks does not run jemalloc; the
+# system allocator works fine for typed-store's RocksDB usage.
 
 [dev-dependencies]
 tempfile.workspace = true
