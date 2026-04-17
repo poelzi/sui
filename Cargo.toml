@@ -336,7 +336,7 @@ bytes = { version = "1.11.1", features = ["serde"] }
 cached = "0.43.0"
 camino = "1.1.1"
 cfg-if = "1.0.0"
-chrono = { version = "=0.4.39", features = ["clock", "serde"] }
+chrono = { version = "0.4.39", features = ["clock", "serde"] }
 clap = { version = "4.4", features = ["derive", "wrap_help"] }
 clap_complete = "4.4"
 codespan-reporting = "0.11.1"
@@ -537,7 +537,7 @@ test-fuzz = "3.0.4"
 thiserror = "1.0.40"
 timeout-tracing = "0.1.2"
 tiny-bip39 = "1.0.0"
-tokio = "=1.49.0"
+tokio = "1.49.0"
 tokio-retry = "0.3"
 tokio-rustls = { version = "0.26", default-features = false, features = [
   "tls12",
@@ -593,7 +593,7 @@ uint = "0.10.0"
 unescape = "0.1.0"
 ureq = "2.9.1"
 url = "2.3.1"
-uuid = { version = "1.1.2", features = ["v4", "fast-rng"] }
+uuid = { version = "1.6", features = ["v4", "v7", "serde", "fast-rng"] }
 walkdir = "2.5.0"
 webpki = { version = "0.103.10", package = "rustls-webpki", features = [
   "alloc",
